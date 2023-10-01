@@ -1,0 +1,891 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_blue"
+    android:backgroundTint="@color/skyblue"
+    android:backgroundTintMode="multiply"
+    android:gravity="center"
+    tools:context=".fragment.SiteInfoFragment">
+
+    <include
+        android:id="@+id/LoadingScreen"
+        layout="@layout/loading_screen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        tools:visibility="gone" />
+
+    <!--Background for icons on toolbar -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:elevation="2dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="7dp"
+            android:src="@drawable/circle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription,ImageContrastCheck" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="7dp"
+            android:src="@drawable/circle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription,ImageContrastCheck" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Name of site -->
+
+            <TextView
+                android:id="@+id/siteName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:fontFamily="@font/overwave"
+                android:gravity="center_horizontal"
+                android:text="@string/blank"
+                android:textColor="@color/colorAccent"
+                android:textSize="45sp" />
+
+            <!-- General information card -->
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/generalInfoBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginRight="30dp"
+                app:cardBackgroundColor="#4B6990"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp"
+                app:cardMaxElevation="10dp"
+                app:cardPreventCornerOverlap="true"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:orientation="vertical">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:orientation="horizontal">
+
+                        <!-- General information about the site -->
+
+                        <TextView
+                            android:id="@+id/generalInformation"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:gravity="center_horizontal"
+                            android:text="@string/general_info_about_site"
+                            android:textColor="@color/colorAccent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/arrow"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/arrow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toEndOf="@+id/generalInformation"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/down_darkblue"
+                            app:tint="@color/colorAccent"
+                            android:contentDescription="@string/ContentDescription_arrow_pointing_down"
+                            app:layout_constraintHorizontal_chainStyle="packed"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/relativelayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:visibility="gone">
+
+                        <!-- POSITION -->
+
+                        <TextView
+                            android:id="@+id/position"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:text="@string/position"
+                            android:textColor="@color/colorAccent" />
+
+                        <TextView
+                            android:id="@+id/positionView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:fontFamily="@font/montserrat"
+                            android:text="@string/blank"
+                            android:textColor="@color/colorAccent"
+                            tools:ignore="RelativeOverlap" />
+
+                        <!-- SITE NUMBER -->
+
+                        <TextView
+                            android:id="@+id/siteNr"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/positionView"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:text="@string/site_number"
+                            android:textColor="@color/colorAccent" />
+
+                        <TextView
+                            android:id="@+id/siteNrView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/positionView"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:fontFamily="@font/montserrat"
+                            android:text="@string/blank"
+                            android:textColor="@color/colorAccent" />
+
+                        <!-- PLACEMENT -->
+
+                        <TextView
+                            android:id="@+id/placement"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/siteNrView"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:text="@string/placement"
+                            android:textColor="@color/colorAccent" />
+
+                        <TextView
+                            android:id="@+id/placementView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/siteNrView"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:fontFamily="@font/montserrat"
+                            android:text="@string/blank"
+                            android:textColor="@color/colorAccent" />
+
+                        <!-- CAPACITY -->
+
+                        <TextView
+                            android:id="@+id/capacity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/placementView"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:text="@string/capacity"
+                            android:textColor="@color/colorAccent" />
+
+                        <TextView
+                            android:id="@+id/capacityView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/placementView"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:fontFamily="@font/montserrat"
+                            android:text="@string/blank"
+                            android:textColor="@color/colorAccent" />
+
+                        <!-- WATER TYPE -->
+
+                        <TextView
+                            android:id="@+id/waterType"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/capacityView"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:text="@string/water_type"
+                            android:textColor="@color/colorAccent" />
+
+                        <TextView
+                            android:id="@+id/waterTypeView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/capacityView"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:fontFamily="@font/montserrat"
+                            android:text="@string/blank"
+                            android:textColor="@color/colorAccent" />
+
+                        <!-- MUNICIPALITY -->
+
+                        <TextView
+                            android:id="@+id/municipality"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/waterTypeView"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:text="@string/municipality"
+                            android:textColor="@color/colorAccent" />
+
+                        <TextView
+                            android:id="@+id/municipalityView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/waterTypeView"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:fontFamily="@font/montserrat"
+                            android:text="@string/blank"
+                            android:textColor="@color/colorAccent" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <!-- Information cards -->
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="15dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <!-- Water information card -->
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/wavesIcon"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="12dp"
+                        android:elevation="11dp"
+                        android:transitionName="icon_water"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/waterInfoCard"
+                        app:srcCompat="@drawable/mdi___waves"
+                        tools:ignore="ContentDescription,ImageContrastCheck" />
+
+                    <ImageView
+                        android:id="@+id/circleFilledWhiteIcon"
+                        android:layout_width="71dp"
+                        android:layout_height="66dp"
+                        android:layout_gravity="center"
+                        android:elevation="10dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/waterInfoCard"
+                        app:srcCompat="@drawable/circle_filled_white"
+                        tools:ignore="ContentDescription" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/waterInfoCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardBackgroundColor="@color/colorAccent"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="5dp"
+                        app:cardMaxElevation="10dp"
+                        app:cardPreventCornerOverlap="true"
+                        app:cardUseCompatPadding="true"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/constraintLayout2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp">
+
+                            <!-- Water card title -->
+
+                            <TextView
+                                android:id="@+id/waterCardTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="32dp"
+                                android:fontFamily="@font/montserrat_bold"
+                                android:text="@string/water"
+                                android:textAlignment="center"
+                                android:textColor="@color/primaryTextColor"
+                                android:textSize="17sp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <!-- Textboxes for currents -->
+
+                            <LinearLayout
+                                android:id="@+id/currents"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.08"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/waterCardTitle"
+                                app:layout_constraintVertical_bias="0.0"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_gravity="center"
+                                    android:fontFamily="@font/montserrat_semibold"
+                                    android:text="@string/currents"
+                                    android:textColor="@color/primaryTextColor" />
+
+                                <TextView
+                                    android:id="@+id/currentsValue"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:textColor="@color/api_title_color"
+                                    android:textSize="14sp"
+                                    tools:ignore="TextContrastCheck"
+                                    tools:text="@string/blank" />
+
+                            </LinearLayout>
+
+                            <!-- Textboxes for temprature -->
+
+                            <LinearLayout
+                                android:id="@+id/temperature"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.501"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/waterCardTitle"
+                                android:orientation="vertical" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="8dp"
+                                    android:fontFamily="@font/montserrat_semibold"
+                                    android:text="@string/temp"
+                                    android:textColor="@color/primaryTextColor" />
+
+                                <TextView
+                                    android:id="@+id/tempratureValue"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="1dp"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/primaryTextColor"
+                                    android:textSize="14sp"
+                                    tools:ignore="TextContrastCheck"
+                                    tools:text="@string/blank" />
+
+                            </LinearLayout>
+
+                            <!-- Textboxes for salinity -->
+
+                            <LinearLayout
+                                android:id="@+id/salinity"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.88"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/waterCardTitle"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="8dp"
+                                    android:fontFamily="@font/montserrat_semibold"
+                                    android:text="@string/salt"
+                                    android:textColor="@color/primaryTextColor" />
+
+                                <TextView
+                                    android:id="@+id/salinityValue"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="1dp"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/primaryTextColor"
+                                    android:textSize="14sp"
+                                    tools:ignore="TextContrastCheck"
+                                    tools:text="@string/blank" />
+
+                            </LinearLayout>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!-- Infection card -->
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/infectionIcon"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="12dp"
+                        android:elevation="11dp"
+                        android:transitionName="image_big"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/infectionInfoCard"
+                        app:srcCompat="@drawable/mdi___virus"
+                        tools:ignore="ContentDescription,ImageContrastCheck" />
+
+                    <ImageView
+                        android:id="@+id/whitecircle"
+                        android:layout_width="71dp"
+                        android:layout_height="66dp"
+                        android:layout_gravity="center"
+                        android:elevation="10dp"
+                        android:transitionName="image_small"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/infectionInfoCard"
+                        app:srcCompat="@drawable/circle_filled_white"
+                        tools:ignore="ContentDescription,ImageContrastCheck" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/infectionInfoCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardBackgroundColor="@color/colorAccent"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="5dp"
+                        app:cardMaxElevation="10dp"
+                        app:cardPreventCornerOverlap="true"
+                        app:cardUseCompatPadding="true"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/constraintLayout4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp">
+
+                            <TextView
+                                android:id="@+id/infectionCardTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="32dp"
+                                android:fontFamily="@font/montserrat_bold"
+                                android:text="@string/infection"
+                                android:textAlignment="center"
+                                android:textColor="@color/primaryTextColor"
+                                android:textSize="17sp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <!-- Textboxes for salmon louse -->
+
+                            <LinearLayout
+                                android:id="@+id/salmonLouse"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.13"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/infectionCardTitle"
+                                android:orientation="vertical"
+                                tools:ignore="UseCompoundDrawables">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="8dp"
+                                    android:fontFamily="@font/montserrat_semibold"
+                                    android:text="@string/salmon_louse"
+                                    android:textColor="@color/primaryTextColor" />
+
+                                <ImageView
+                                    android:id="@+id/dangerSalmonLouse"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="1dp"
+                                    android:contentDescription="@string/salmon_louse_data_not_found"
+                                    app:srcCompat="@drawable/checkmark"
+                                    tools:ignore="ImageContrastCheck" />
+
+
+                            </LinearLayout>
+
+                            <!-- Textboxes for pancreas disease-->
+
+                            <LinearLayout
+                                android:id="@+id/pd"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/infectionCardTitle"
+                                app:layout_constraintVertical_bias="0.0"
+                                android:orientation="vertical"
+                                tools:ignore="UseCompoundDrawables">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="8dp"
+                                    android:fontFamily="@font/montserrat_semibold"
+                                    android:text="@string/pd"
+                                    android:textColor="@color/primaryTextColor" />
+
+                                <ImageView
+                                    android:id="@+id/pdIcon"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="1dp"
+                                    android:contentDescription="@string/pancreas_disease_data_not_found"
+                                    app:srcCompat="@drawable/checkmark"
+                                    tools:ignore="ImageContrastCheck" />
+
+                            </LinearLayout>
+
+                            <!-- Textboxes for infecious samlon anemia -->
+
+                            <LinearLayout
+                                android:id="@+id/ila"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.865"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/infectionCardTitle"
+                                android:orientation="vertical"
+                                tools:ignore="UseCompoundDrawables">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="8dp"
+                                    android:fontFamily="@font/montserrat_semibold"
+                                    android:text="@string/ila"
+                                    android:textColor="@color/primaryTextColor" />
+
+                                <ImageView
+                                    android:id="@+id/ilaIcon"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="1dp"
+                                    android:contentDescription="@string/ila_data_not_found"
+                                    app:srcCompat="@drawable/checkmark"
+                                    tools:ignore="ImageContrastCheck" />
+
+
+                            </LinearLayout>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!-- Weather information card -->
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/weatherIcon"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="12dp"
+                        android:elevation="11dp"
+                        android:transitionName="image_weather"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/weatherInfoCard"
+                        app:srcCompat="@drawable/mdi___cloud_outline"
+                        tools:ignore="ContentDescription,ImageContrastCheck" />
+
+                    <ImageView
+                        android:id="@+id/circleFilledWhiteIcon3"
+                        android:layout_width="71dp"
+                        android:layout_height="66dp"
+                        android:layout_gravity="center"
+                        android:elevation="10dp"
+                        android:transitionName="image_small"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/weatherInfoCard"
+                        app:srcCompat="@drawable/circle_filled_white"
+                        tools:ignore="ContentDescription" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/weatherInfoCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardBackgroundColor="@color/colorAccent"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="5dp"
+                        app:cardMaxElevation="10dp"
+                        app:cardPreventCornerOverlap="true"
+                        app:cardUseCompatPadding="true"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/constraintLayout6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp">
+
+                            <TextView
+                                android:id="@+id/weatherCardTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="32dp"
+                                android:fontFamily="@font/montserrat_bold"
+                                android:text="@string/weather"
+                                android:textAlignment="center"
+                                android:textColor="@color/primaryTextColor"
+                                android:textSize="17sp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <!-- Textboxes for todays weather  -->
+
+                            <LinearLayout
+                                android:id="@+id/today"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.115"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/weatherCardTitle"
+                                android:orientation="vertical" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="8dp"
+                                    android:fontFamily="@font/montserrat_semibold"
+                                    android:text="@string/todayText"
+                                    android:textColor="@color/primaryTextColor" />
+
+                                <ImageView
+                                    android:id="@+id/weatherToday"
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:layout_gravity="center"
+                                    android:contentDescription="@string/weather_symbol_not_found"
+                                    android:src="@drawable/sunny"
+                                    tools:ignore="ImageContrastCheck" />
+
+                                <TextView
+                                    android:id="@+id/temperatureToday"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:textColor="@color/primaryTextColor"
+                                    android:textSize="14sp"
+                                    tools:ignore="TextContrastCheck"
+                                    tools:text="@string/blank" />
+
+                            </LinearLayout>
+
+                            <!-- Textboxes for tomorrows weather -->
+
+                            <LinearLayout
+                              android:id="@+id/tomorrow"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              app:layout_constraintEnd_toEndOf="parent"
+                              app:layout_constraintStart_toStartOf="parent"
+                              app:layout_constraintTop_toBottomOf="@+id/weatherCardTitle"
+                              app:layout_constraintVertical_bias="0.0"
+                              android:orientation="vertical" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="8dp"
+                                    android:fontFamily="@font/montserrat_semibold"
+                                    android:text="@string/tomorrow"
+                                    android:textColor="@color/primaryTextColor" />
+
+                                <ImageView
+                                    android:id="@+id/weatherTomorrow"
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:layout_gravity="center"
+                                    android:contentDescription="@string/weather_symbol_not_found"
+                                    android:src="@drawable/sunny"
+                                    tools:ignore="ImageContrastCheck" />
+
+                                <TextView
+                                    android:id="@+id/temperatureTomorrow"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:textColor="@color/primaryTextColor"
+                                    android:textSize="14sp"
+                                    tools:ignore="TextContrastCheck"
+                                    tools:text="@string/blank" />
+
+                          </LinearLayout>
+
+                            <!-- Textboxes for storm -->
+
+                            <LinearLayout
+                                android:id="@+id/storm"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.95"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/weatherCardTitle"
+                                android:orientation="vertical" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="8dp"
+                                    android:fontFamily="@font/montserrat_semibold"
+                                    android:text="@string/storm"
+                                    android:textColor="@color/primaryTextColor"
+                                    android:layout_gravity="center"/>
+
+                                <ImageView
+                                    android:id="@+id/stormWeather"
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:layout_gravity="center"
+                                    android:contentDescription="@string/weather_symbol_not_found"
+                                    android:src="@drawable/sunny"
+                                    tools:ignore="TooManyViews,ImageContrastCheck" />
+
+                                <TextView
+                                    android:id="@+id/stormSignal"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="@string/no_storm"
+                                    android:textColor="@color/primaryTextColor"
+                                    android:textSize="14sp"
+                                    tools:ignore="TextContrastCheck" />
+
+
+                            </LinearLayout>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

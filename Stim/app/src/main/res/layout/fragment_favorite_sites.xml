@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_blue"
+    android:backgroundTint="@color/skyblue"
+    android:backgroundTintMode="multiply">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="60dp"
+        android:fitsSystemWindows="true"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:listitem="@layout/recycleview_element_overview"
+        tools:visibility="invisible" />
+
+    <!-- if the user has no favorites: -->
+
+    <RelativeLayout
+        android:id="@+id/noFavoriteSites"
+        android:layout_width="0dp"
+        android:orientation="vertical"
+        android:elevation="50dp"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/NB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="128dp"
+            android:gravity="center_horizontal"
+            android:text="@string/NB_text"
+            android:textColor="@color/colorAccent"
+            android:textSize="14sp"
+            android:fontFamily="@font/montserrat_semibold">
+        </TextView>
+
+        <TextView
+            android:id="@+id/NB_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/NB"
+            android:layout_centerInParent="true"
+            android:gravity="center_horizontal"
+            android:text="@string/NB_2_text"
+            android:textColor="@color/colorAccent"
+            android:fontFamily="@font/montserrat_semibold">
+        </TextView>
+
+        <ImageView
+            android:id="@+id/number1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/NB_2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:contentDescription="@string/Content_description_step1"
+            app:srcCompat="@drawable/numeric_1_circle_outline"
+            tools:ignore="ImageContrastCheck">
+
+        </ImageView>
+
+        <TextView
+            android:id="@+id/step1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/number1"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/montserrat"
+            android:gravity="center_horizontal"
+            android:text="@string/Step1_text"
+            android:textColor="@color/colorAccent"
+            tools:ignore="TextContrastCheck" />
+
+        <ImageView
+            android:id="@+id/number2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/step1"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="30dp"
+            android:contentDescription="@string/Content_description_step2"
+            app:srcCompat="@drawable/numeric_2_circle_outline"
+            tools:ignore="ImageContrastCheck" />
+
+        <TextView
+            android:id="@+id/step2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/number2"
+            android:layout_centerInParent="true"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="30dp"
+            android:text="@string/Step2_text"
+            android:textColor="@color/colorAccent"
+            android:fontFamily="@font/montserrat">
+        </TextView>
+
+        <ImageView
+            android:id="@+id/number3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_below="@+id/step2"
+            android:layout_centerInParent="true"
+            app:srcCompat="@drawable/numeric_3_circle_outline"
+            android:contentDescription="@string/Content_description_step3">
+
+        </ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/number3"
+            android:layout_centerInParent="true"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="30dp"
+            android:text="@string/Step3_text"
+            android:textColor="@color/colorAccent"
+            android:fontFamily="@font/montserrat">
+        </TextView>
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

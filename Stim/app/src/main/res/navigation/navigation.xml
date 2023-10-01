@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/mapFragment">
+
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="no.uio.ifi.team16.stim.fragment.MapFragment"
+        android:label="">
+        <action
+            android:id="@+id/action_mapFragment_to_siteInfoFragment"
+            app:destination="@id/siteInfoFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/favoriteSitesFragment"
+        android:name="no.uio.ifi.team16.stim.fragment.FavoriteSitesFragment"
+        android:label="Favoritter" >
+        <action
+            android:id="@+id/action_favoriteSitesFragment_to_siteInfoFragment"
+            app:destination="@id/siteInfoFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/siteInfoFragment"
+        android:name="no.uio.ifi.team16.stim.fragment.SiteInfoFragment"
+        android:label=""
+        tools:layout="@layout/fragment_site_info" >
+        <action
+            android:id="@+id/action_siteInfoFragment_to_weatherFragment"
+            app:destination="@id/weatherFragment" />
+        <action
+            android:id="@+id/action_siteInfoFragment_to_waterFragment"
+            app:destination="@id/waterFragment" />
+        <action
+            android:id="@+id/action_siteInfoFragment_to_infectionFragment"
+            app:destination="@id/infectionFragment"
+            app:enterAnim="@android:anim/slide_in_left" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/weatherFragment"
+        android:name="no.uio.ifi.team16.stim.fragment.WeatherFragment"
+        tools:layout="@layout/fragment_weather" />
+    <fragment
+        android:id="@+id/waterFragment"
+        android:name="no.uio.ifi.team16.stim.fragment.WaterFragment"
+        tools:layout="@layout/fragment_water" />
+    <fragment
+        android:id="@+id/infectionFragment"
+        android:name="no.uio.ifi.team16.stim.fragment.InfectionFragment"
+        tools:layout="@layout/fragment_infection" />
+    <activity
+        android:id="@+id/tutorialFragment"
+        android:name="no.uio.ifi.team16.stim.TutorialActivity"
+        android:label="fragment_tutorial"
+        tools:layout="@layout/fragment_tutorial" />
+    <fragment
+        android:id="@+id/appInfoFragment"
+        android:name="no.uio.ifi.team16.stim.fragment.AppInfoFragment"
+        android:label="App Info"
+        tools:layout="@layout/fragment_app_info" />
+
+
+</navigation>

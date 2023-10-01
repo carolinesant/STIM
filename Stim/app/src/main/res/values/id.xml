@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    //id for actions in speedDial
+    <item name="heatmap_infectiousPressure" type="id" />
+    <item name="heatmap_salinity" type="id" />
+    <item name="heatmap_temperature" type="id" />
+    <item name="heatmap_velocity" type="id" />
+</resources>

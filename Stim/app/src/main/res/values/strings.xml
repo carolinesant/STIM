@@ -1,0 +1,187 @@
+<resources>
+    <string name="app_name">Stim</string>
+
+    <!-- Recycleview for sites -->
+    <string name="site_location">Kommune: %s</string>
+    <string name="visual_of_the_location_of_the_site">Oversiktsbilde av anlegget</string>
+
+    <!-- Fragment site info -->
+    <string name="salt">SALT.</string>
+    <string name="infection">SMITTE</string>
+    <string name="waterdata">VANNDATA</string>
+    <string name="weather">VÆR</string>
+    <string name="water">VANN</string>
+
+    <!-- Drawer menu -->
+    <string name="Map">Kart</string>
+    <string name="Favorites">Favoritter</string>
+    <string name="how_to_STIM">Hvordan bruke Stim</string>
+    <string name="app_info">App-info</string>
+    <string name="stim">STIM</string>
+    <string name="blank">-----</string>
+    <string name="general">GENERELT</string>
+    <string name="todayText">I DAG</string>
+    <string name="tomorrow">I MORGEN</string>
+    <string name="storm">STORM</string>
+
+    <string name="bottomsheet_default_header">Liste over anlegg</string>
+    <string name="bottomsheet_formatted_header">Liste over anlegg i kommune: %s</string>
+
+    <!-- Weather fragment-->
+    <string name="weather_icon">Vær-ikon</string>
+    <string name="storm_forecast">STORMVARSEL</string>
+    <string name="temperature">%.0f°</string>
+    <string name="monday">Mandag</string>
+    <string name="tuesday">Tirsdag</string>
+    <string name="wednesday">Onsdag</string>
+    <string name="thursday">Torsdag</string>
+    <string name="friday">Fredag</string>
+    <string name="saturday">Lørdag</string>
+    <string name="sunday">Søndag</string>
+    <string name="shortMonday">Man</string>
+    <string name="shortTuesday">Tir</string>
+    <string name="shortWednesday">Ons</string>
+    <string name="shortThursday">Tor</string>
+    <string name="shortFriday">Fre</string>
+    <string name="shortSaturday">Lør</string>
+    <string name="shortSunday">Søn</string>
+    <string name="today">I dag</string>
+    <string name="storm_predicted">En storm med styrke %.1f m/s inntreffer %s.</string>
+    <string name="on">på</string>
+    <string name="no_storm">Ingen meldt</string>
+    <string name="storm_at">Storm på %s</string>
+    <string name="storm_today">Storm i dag</string>
+
+    <!-- infection -->
+    <string name="no_suspicion">Ingen mistanke</string>
+    <string name="not_proven">Ikke påvist</string>
+    <string name="currentInfection_format">%4.2f</string>
+
+    <!-- site info -->
+    <string name="Location_placeholder">%.4f, %.4f</string>
+    <string name="Temperature_placeholder">%4.1f °</string>
+    <string name="Salt_placeholder">%4.1f</string>
+    <string name="Currents_placeholder">%4.1f m/s</string>
+    <string name="no_info">N/A</string>
+
+    <!-- app info -->
+    <string name="Appinfo_description">Stim er studentprosjekt utviklet for å støtte opp under den daglige driften til ansatte og fiskehelsepersonell ved oppdrettsanlegg i Norge</string>
+    <string name="datasources">Datakilder</string>
+    <string name="thredds_infectiouspressure">THREDDS - Smittepress</string>
+    <string name="Infectiouspressure_description">Lakselus data</string>
+    <string name="thredds_norkyst800">THREDDS - NorKyst800</string>
+    <string name="Norkyst800_description">Temperatur, saltholdighet, strømmninger</string>
+    <string name="Siteregister">Akvakulturregisteret</string>
+    <string name="siteregister_description">Navn på oppdrettsanlegg og plassering</string>
+    <string name="map_Geonorge">Kartverket/GeoNorge adresseoppslag</string>
+    <string name="Map_geonorge_description">Adresse og kommunenummer på kartet</string>
+    <string name="Met_locationforcast">MET LocationForecast</string>
+    <string name="Met_description">Værvarsel for et anlegg</string>
+    <string name="maps_static_api">Maps Static API</string>
+    <string name="maps_static_description">Bilde av hvert anlegg</string>
+    <string name="barentswatch_fishhealth_api">BarentsWatch FishHealth API</string>
+    <string name="barrentswatch_description">Lakseanemi og pankerassykdom data</string>
+    <string name="laget_av_team_16">Laget av Team 16</string>
+    <string name="version">versjon 1.0</string>
+
+    <!-- Status dialog infection icon info -->
+    <string name="icons_for_infection">Ikoner for smittestatus</string>
+    <string name="no_infectiouspressure_found">Fant ikke smittedata</string>
+    <string name="No_infection_found">Veldig lav/ingen smitte</string>
+    <string name="Significant_infection_decrease">Signifikant smitteminsking</string>
+    <string name="Low_infection">Lav/medium smitte</string>
+    <string name="singificant_infectionincrease">Signifikant smitteøkning</string>
+    <string name="high_infection">Høy smitte</string>
+
+    <!-- favorite site list-->
+    <string name="NB_text">Du har ikke valgt noen favoritt anlegg enda…</string>
+    <string name="NB_2_text">Følg stegene under for å legge til dine favoritter:</string>
+    <string name="Content_description_step1">Steg en</string>
+    <string name="Step1_text">Trykk på menyen i øverste venstre hjørne og velg Kart</string>
+    <string name="Content_description_step2">Steg to</string>
+    <string name="Step2_text">Søk etter anlegg ved å skrive kommune eller navn på anlegget</string>
+    <string name="Content_description_step3">Steg tre</string>
+    <string name="Step3_text">Trekk opp menyen fra bunn og trykk på hjerte ikonet for å lagre et anlegg</string>
+    <string name="Infection_title">SMITTEDATA</string>
+    <string name="calculating_status">Beregner status…</string>
+    <string name="Infectiongraph">Graf over lakselussmitte</string>
+    <string name="Week_label">Uke Nr.</string>
+    <string name="Information_title_infection">Informasjon om smittedata</string>
+    <string name="information_alwaysvisible">Denne grafen viser til antall lakselus funnet i anlegget. For å se mer info om ulike statussymbol, klikk på symbolet lengre oppe. Finn all data i tabellen nedenfor.</string>
+    <string name="Information_hidden">Lakselus er en parasitt som suger ut blod fra laksen. På de fleste anlegg måles lakselus manuelt. En gang i måneden drar fiskehelsepersonell ut, plukker opp noen fisker og teller antall lus. Grensen for å måtte behandle går på 0.5 lus per fisk. For å fjerne lakselus benyttes det enten kjemikalier eller mekanisk fjerning. Denne prosessen er assosiert med en høy dødelighet. Parasitten er også veldig farlig for bevarelsen av villaksen i Norge, og det er det som gjør lakselusen spesielt skadelig. Laks i oppdrettsanlegg rømmer med parasitten og smitter dette over til villaksen, som skader populasjonen. Den bidrar også til at næringen taper millioner av kroner hvert år. Derfor ønsker man kontinuerlig monitorering for å identifisere de områdene med forhøyet lakselus smittetrykk som utgjør en uakseptabel risiko for dødeligheten til villaks.</string>
+    <string name="Content_description_infectionarrow">Pil som utvider informasjonsvindu</string>
+    <string name="Infectiondata">Smittedata</string>
+    <string name="Suspition_PD_unknown">Mistanke PD ukjent:</string>
+    <string name="Proven_PD_unknown">Påvist PD Ukjent:</string>
+    <string name="suspicion_sav2">Mistanke SAV2 PD:</string>
+    <string name="proven_sav2_pd">Påvist SAV2 PD:</string>
+    <string name="suspicion_sav3_pd">Mistanke SAV3 PD:</string>
+    <string name="proven_sav3_pd">Påvist SAV3 PD:</string>
+    <string name="suspicion_ILA">Mistanke ILA:</string>
+    <string name="proven_ILA">Påvist ILA:</string>
+
+    <!-- site info fragment -->
+    <string name="general_info_about_site">Generell informasjon om anlegget</string>
+    <string name="ContentDescription_arrow_pointing_down">Pil for å utvide informasjonsvindu</string>
+    <string name="position">Posisjon:</string>
+    <string name="site_number">Anleggsnr:</string>
+    <string name="placement">Plassering:</string>
+    <string name="capacity">Kapasitet:</string>
+    <string name="water_type">Vanntype:</string>
+    <string name="municipality">Kommune:</string>
+    <string name="currents">STRØMN.</string>
+    <string name="temp">TEMP.</string>
+    <string name="salmon_louse">LUS</string>
+    <string name="pd">PD</string>
+    <string name="ila">ILA</string>
+    <string name="salmon_louse_data_not_found">Lakselussmitte data ikke funnet</string>
+    <string name="pancreas_disease_data_not_found">Pankreassykdomsdata ikke funnet</string>
+    <string name="ila_data_not_found">Infeksiøs lakseanemi data ikke funnet</string>
+    <string name="weather_symbol_not_found">Værsymbol ikke funnet</string>
+
+    <!-- waterInfo fragment -->
+    <string name="waterTemperature">Vanntemperatur:</string>
+    <string name="waterSalinityLevel">Saltholdighet:</string>
+    <string name="salinityChart">Graf over saltholdighet</string>
+    <string name="tempChart">Graf over vanntemperatur</string>
+    <string name="timeInHours">Tid i timer</string>
+    <string name="seeSalinity">Se Saltholdighet</string>
+    <string name="seeWaterTemperature">Se Vanntemperatur</string>
+    <string name="currents_">Strømninger:</string>
+    <string name="currentDirection">Strømretning:</string>
+    <string name="current_velocity_direction">Nåværende strømretning</string>
+    <string name="info_about_watertemp_and_salinity">Informasjon om vanntemperatur og saltholdighetsdata</string>
+    <string name="infoAboutChart">Denne grafen viser til saltholdighet og vanntemperatur funnet i anlegget. For å endre grafen vist klikker du på knappen lenger oppe. Du kan også zoome inn og navigere grafen med touch. Nedenfor finner du tabeller med all data.</string>
+    <string name="waterDataInformation">Vanndata er nyttig for å regulere fiskens helse. For kaldt vann og for mye strømninger kan for eksempel lede til vanskeligheter for å vokse. Resultat fra ny forskning ved Havforskningsinstituttet viser at vedvarende strømstyrke som smålaks opplever ikke bør overstige ca. 50 cm/s. Dette varierer derimot ut fra størrelsen på fisken, der stor laks tåler mindre enn liten. Vanntemperaturen påvirker laksen sin kapasitet til å svømme mot strømmen betydelig hvis temperaturen er 3°C i motsetning 8–23°C. Selv om laks vokser best ved 9–18°C kan da fint tåle langt lavere temperaturer, men da synker altså evnen til å håndtere sterk strøm. I tillegg påvirker vanntemperaturen utviklingen og dødeligheten av lakselus, der den øker i varmere temperaturer.</string>
+    <string name="time">Tid</string>
+    <string name="waterTemp">Vanntemperatur</string>
+    <string name="salinity">Saltholdighet</string>
+    <string name="now">nåtid</string>
+    <string name="no_data_available">Ingen data tilgjengelig</string>
+    <string name="norkyst_local_load_error">Klarte ikke laste inn lokale NorKyst-data, vanninfo er utilgjengelig</string>
+    <string name="norkyst_global_load_error">Klarte ikke laste inn globale norkyst-data, vanninfo er utilgjengelig</string>
+    <string name="no_local_data">Ingen data i nærliggende områder</string>
+    <string name="no_data_loaded">Ingen data lastet inn ennå</string>
+
+    <!-- mapfragment -->
+    <string name="municipality_">Kommune:</string>
+    <string name="number_of_sites_found">Antall anlegg:</string>
+    <string name="loading">Laster inn…</string>
+    <string name="see_infection_pressure_on_map">Se smittepress på kartet</string>
+    <string name="hide_infection_pressure_on_map">Skjul smittepress på kartet</string>
+    <string name="search_here">Søk her</string>
+
+    <!-- tutorial carusell -->
+    <string name="welcome_to_stim">Velkommen til Stim</string>
+    <string name="tutorial_slide_1_text">Stim er en app som lar deg få oversikt over alle oppdrettsanlegg i Norge.</string>
+    <string name="sok_etter_noppdrettsanlegg">Søk etter\noppdrettsanlegg</string>
+    <string name="tutorial_slide_2_text">Finn anlegg ved hjelp av navn eller kommune i søkefeltet.</string>
+    <string name="finn_fram_paa_kartet">Finn fram på kartet</string>
+    <string name="tutorial_slide_3_text">Finn din kommune på kartet for å se alle anlegg i kommunen.</string>
+    <string name="visualiser_smittetrykk">Visualiser smittetrykk</string>
+    <string name="tutorial_slide_4_text">Trykk på knappen under søkefeltet for å se et heatmap over smittetrykk.</string>
+    <string name="tutorial_slide_4_text2">PS: dette kan ta litt tid</string>
+    <string name="lagre_dine_favoritter">Lagre dine favoritter</string>
+    <string name="tutorial_slide_5_text">Legg til dine anlegg til favorittsiden ved å trykke på hjertet.</string>
+    <string name="current_infection">Nåværende smittepress:</string>
+</resources>

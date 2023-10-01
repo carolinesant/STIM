@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:id="@+id/rowLayout">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/table_display_week"
+        android:layout_weight="0.25"
+        android:gravity="center"
+        android:fontFamily="@font/montserrat_bold"
+        android:textStyle="bold"
+        android:textColor="@color/primaryTextColor"
+        android:background="@color/skyblue" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:id="@+id/table_display_float"
+        android:layout_weight="0.75"
+        android:textColor="@color/primaryTextColor"
+        android:gravity="center"
+        android:fontFamily="@font/montserrat_light" />
+
+</LinearLayout>
